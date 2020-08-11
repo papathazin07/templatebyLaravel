@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return 'Hello Laraval';
+Route::get('/', 'PageController@homefun')->name('home');//data show page
+Route::get('about','PageController@aboutfun')->name('about');
+Route::get('contact','PageController@contactfun')->name('contact');
+Route::get('sample','PageController@samplefun')->name('sample');
 
-});
+
